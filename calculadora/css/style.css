@@ -24,10 +24,10 @@ body {
 
 .calc-input {
     margin: 2px;
+    height: 50px;
 }
 
-.guarda {
-    background-color: violet;
+.display {
     height: 50px;
 }
 

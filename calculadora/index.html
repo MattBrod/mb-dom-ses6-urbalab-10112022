@@ -23,44 +23,41 @@
             <div class="col-12 col-md colBox d-flex justify-content-center align-items-center">
                 <div class="calc">
                     <div class="calc-input">
-                        <input class="form-control" type="text" placeholder="0.00">
-                    </div>
-                    <div class="guarda">
-                        2+8+9=10
+                        <input id="input1" class="form-control text-end display" type="text" placeholder="0">
                     </div>
                     <div class="fila">
-                        <button type="button" id="btn1" class="btn btn-success boton" onclick="element('btn1')">1</button>
-                        <button type="button" id="btn2" class="btn btn-success boton">2</button>
-                        <button type="button" id="btn3" class="btn btn-success boton">3</button>
-                        <button type="button" id="btn+" class="btn btn-success boton ope" onclick="suma()">+</button>
+                        <button type="button" id="btn1" class="btn btn-dark boton" name="1" value="1" onclick="element('btn1')">1</button>
+                        <button type="button" id="btn2" class="btn btn-dark boton" name="2" value="2" onclick="element('btn2')">2</button>
+                        <button type="button" id="btn3" class="btn btn-dark boton" name="3" value="3" onclick="element('btn3')">3</button>
+                        <button type="button" id="btn+" class="btn btn-secondary boton ope" name="+" value="+" onclick="element('btn+')">+</button>
                     </div>
                     <div class="fila">
-                        <button type="button" id="btn4" class="btn btn-success boton">4</button>
-                        <button type="button" id="btn5" class="btn btn-success boton">5</button>
-                        <button type="button" id="btn6" class="btn btn-success boton">6</button>
-                        <button type="button" id="btn-" class="btn btn-success boton  ope">-</button>
+                        <button type="button" id="btn4" class="btn btn-dark boton" name="4" value="4" onclick="element('btn4')">4</button>
+                        <button type="button" id="btn5" class="btn btn-dark boton" name="5" value="5" onclick="element('btn5')">5</button>
+                        <button type="button" id="btn6" class="btn btn-dark boton" name="6" value="6" onclick="element('btn6')">6</button>
+                        <button type="button" id="btn-" class="btn btn-secondary boton  ope" name="-" value="-" onclick="element('btn-')">-</button>
                     </div>
                     <div class="fila">
-                        <button type="button" id="btn7" class="btn btn-success boton">7</button>
-                        <button type="button" id="btn8" class="btn btn-success boton">8</button>
-                        <button type="button" id="btn9" class="btn btn-success boton">9</button>
-                        <button type="button" id="btn*" class="btn btn-success boton  ope">*</button>
+                        <button type="button" id="btn7" class="btn btn-dark boton" name="7" value="7" onclick="element('btn7')">7</button>
+                        <button type="button" id="btn8" class="btn btn-dark boton" name="8" value="8" onclick="element('btn8')">8</button>
+                        <button type="button" id="btn9" class="btn btn-dark boton" name="9" value="9" onclick="element('btn9')">9</button>
+                        <button type="button" id="btn*" class="btn btn-secondary boton  ope" name="*" value="*" onclick="element('btn*')">*</button>
                     </div>
                     <div class="fila">
-                        <button type="button" id="btn0" class="btn btn-success boton boton1">0</button>
-                        <button type="button" id="btn." class="btn btn-success boton">.</button>
-                        <button type="button" id="btn/" class="btn btn-success boton  ope">/</button>
+                        <button type="button" id="btn0" class="btn btn-dark boton boton1" name="0" value="0" onclick="element('btn0')">0</button>
+                        <button type="button" id="btn." class="btn btn-dark boton" name="." value="." onclick="element('btn.')">.</button>
+                        <button type="button" id="btn/" class="btn btn-secondary boton  ope" value="/" name="/" onclick="element('btn/')">/</button>
                     </div>
                     <div class="fila">
-                        <button type="button" id="btnc" class="btn btn-success boton boton1 blue">C</button>
-                        <button type="button" id="btn=" class="btn btn-success boton boton1 red">=</button>
+                        <button type="button" id="btnc" class="btn btn-primary boton boton1 blue" name="C" value="C" onclick='clear()'>C</button>
+                        <button type="button" id="btn=" class="btn btn-danger boton boton1 red" name="=" value="=" onclick="resolve()">=</button>
                     </div>
                 </div>
             </div>
             <div class="col-12 col-md-3 colBox info">
                 <h3>Botones Pulsados</h3>
                 <p>Selector:</p>
-                <p id="selector"></p>
+                <p id="selector" name="selector"></p>
                 <p>Valor:</p>
                 <p id="valor"></p>
                 <p>Tag html:</p>
@@ -71,6 +68,7 @@
             </div>
         </div>
     </div>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>
