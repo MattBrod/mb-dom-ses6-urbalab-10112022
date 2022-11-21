@@ -23,7 +23,8 @@
             <div class="col-12 col-md colBox d-flex justify-content-center align-items-center">
                 <div class="calc">
                     <div class="calc-input">
-                        <input id="input1" class="form-control text-end display" type="text" placeholder="0">
+                        <input id="input1" class="form-control text-end text-white display" type="text" placeholder="0">
+                        <p id="save" class="text-end text-white"></p>
                     </div>
                     <div class="fila">
                         <button type="button" id="btn1" class="btn btn-dark boton" name="1" value="1" onclick="element('btn1')">1</button>
@@ -49,7 +50,7 @@
                         <button type="button" id="btn/" class="btn btn-secondary boton  ope" value="/" name="/" onclick="element('btn/')">/</button>
                     </div>
                     <div class="fila">
-                        <button type="button" id="btnc" class="btn btn-primary boton boton1 blue" name="C" value="C" onclick='clear()'>C</button>
+                        <button type="button" id="btnc" class="btn btn-primary boton boton1 blue" name="C" value="C" onclick="clearSave()">C</button>
                         <button type="button" id="btn=" class="btn btn-danger boton boton1 red" name="=" value="=" onclick="resolve()">=</button>
                     </div>
                 </div>
