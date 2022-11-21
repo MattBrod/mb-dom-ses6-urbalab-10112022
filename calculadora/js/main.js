@@ -14,17 +14,17 @@ display = (id) => {
 
 element = (id) => {
     number = document.getElementById(id).innerHTML;
-    if (document.getElementById('input1') == '0') {
-        document.getElementById('input1').value = number;
-        display(id)
-    } else {
-        document.getElementById('input1').value += number;
-        display(id) 
-    }
-    console.log("haha")
+    document.getElementById('save').innerHTML += number;
+    display(id);
 }
 
-resolve = (id) => {
-    document.getElementsById(id).value = number;
-    console.log("haha")
+clearSave = () => {
+    document.getElementById('save').innerHTML = '';
+    display(id);
+}
+
+resolve = () => {
+    userInput = document.getElementById('save').innerHTML;
+    document.getElementById('input1').value = eval(userInput);
+    display(id);
 }
