@@ -7,15 +7,18 @@ body {
     height: 100vh;
 }
 
-.stuff {
-    width: 100%;
+.btn {
+    color: white;
+    background-color: orange;
 }
 
 .round {
     border-radius: 50%;
-    height: 6vw;
-    width: 6vw;
+    height: 5vw;
+    width: 5vw;
     border: none;
+    background-color: #FFFFFF;
+    
 }
 
 .info {
