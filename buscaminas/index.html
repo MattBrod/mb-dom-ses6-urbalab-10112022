@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscaminas</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-12 col-md colBox d-flex justify-content-center align-items-center">
+                <div class="tablearea">
+                    <table class="table border border-dark mt-4" id="tablero">
+                        <tr>
+                            <td class="border border-dark" id="A1" onclick="reveal('1','A1')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="0" id="1"></div>
+                            </td>
+                            <td class=" border border-dark" id="A2" onclick="reveal('2','A2')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="1" id="2"><p class="mb-0">1</p></div>
+                            </td>
+                            <td class=" border border-dark" id="A3" onclick="reveal('3','A3')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="flag" id="3"><p class="mb-0">&#128681</p></div>
+                            </td>
+                            <td class=" border border-dark" id="A4" onclick="reveal('4','A4')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="flag" id="4" ><p class="mb-0">&#128681</p></div>
+                            </td>
+                            <td class=" border border-dark" id="A5" onclick="reveal('5','A5')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="1" id="5" ><p class="mb-0">1</p></div>
+                            </td>
+                            <td class=" border border-dark" id="A6" onclick="reveal('6','A6')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="0" id="6" ></div>
+                            </td>
+                            <td class=" border border-dark" id="A7" onclick="reveal('7','A7')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="0" id="7" ></div>
+                            </td>
+                            <td class=" border border-dark" id="A8" onclick="reveal('8','A8')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="2" id="8" ><p class="mb-0">2</p></div>
+                            </td>
+                            <td class=" border border-dark" id="A9" onclick="reveal('9','A9')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="flag" id="9" ><p class="mb-0">&#128681</p></div>
+                            </td>
+                            <td class=" border border-dark" id="A10" onclick="reveal('10','A10')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="0" id="10" ></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class=" border border-dark" id="B1" onclick="reveal('11','B1')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="0" id="11" ></div>
+                            </td>
+                            <td class=" border border-dark" id="B2" onclick="reveal('12','B2')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="1" id="12" ><p class="mb-0">1</p></div>
+                            </td>
+                            <td class=" border border-dark" id="B3" onclick="reveal('13','B3')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="2" id="13" ><p class="mb-0">2</p></div>
+                            </td>
+                            <td class=" border border-dark" id="B4" onclick="reveal('14','B4')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="2" id="14" ><p class="mb-0">2</p></div>
+                            </td>
+                            <td class=" border border-dark" id="B5" onclick="reveal('15','B5')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="1" id="15" ><p class="mb-0">1</p></div>
+                            </td>
+                            <td class=" border border-dark" id="B6" onclick="reveal('16','B6')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="1" id="16" ><p class="mb-0">1</p></div>
+                            </td>
+                            <td class=" border border-dark" id="B7" onclick="reveal('17','B7')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="1" id="17" ><p class="mb-0">1</p></div>
+                            </td>
+                            <td class=" border border-dark" id="B8" onclick="reveal('18','B8')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="3" id="18" ><p class="mb-0">3</p></div>
+                            </td>
+                            <td class=" border border-dark" id="B9" onclick="reveal('19','B9')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="flag" id="19" ><p class="mb-0">&#128681</p></div>
+                            </td>
+                            <td class=" border border-dark" id="B10" onclick="reveal('20','B10')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="0" id="20" ></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class=" border border-dark" id="C1" onclick="reveal('21','C1')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="0" id="21" ></div>
+                            </td>
+                            <td class=" border border-dark" id="C2" onclick="reveal('22','C2')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="0" id="22" ></div>
+                            </td>
+                            <td class=" border border-dark" id="C3" onclick="reveal('23','C3')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="0" id="23" ></div>
+                            </td>
+                            <td class=" border border-dark" id="C4" onclick="reveal('24','C4')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="0" id="24" ></div>
+                            </td>
+                            <td class=" border border-dark" id="C5" onclick="reveal('25','C5')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="0" id="25" ></div>
+                            </td>
+                            <td class=" border border-dark" id="C6" onclick="reveal('26','C6')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="1" id="26" ><p class="mb-0">1</p></div>
+                            </td>
+                            <td class=" border border-dark" id="C7" onclick="reveal('27','C7')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="flag" id="27" ><p class="mb-0">&#128681</p></div>
+                            </td>
+                            <td class=" border border-dark" id="C8" onclick="reveal('28','C8')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="2" id="28" ><p class="mb-0">2</p></div>
+                            </td>
+                            <td class=" border border-dark" id="C9" onclick="reveal('29','C9')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="2" id="29"><p class="mb-0">2</p></div>
+                            </td>
+                            <td class=" border border-dark" id="C10" onclick="reveal('30','C10')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="flag" id="30" ><p class="mb-0">&#128681</p></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class=" border border-dark" id="D1" onclick="reveal('31','D1')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="0" id="31" ></div>
+                            </td>
+                            <td class=" border border-dark" id="D2" onclick="reveal('32','D2')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="0" id="32" ></div>
+                            </td>
+                            <td class=" border border-dark" id="D3" onclick="reveal('33','D3')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="0" id="33" ></div>
+                            </td>
+                            <td class=" border border-dark" id="D4" onclick="reveal('34','D4')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="1" id="34" ><p class="mb-0">1</p></div>
+                            </td>
+                            <td class=" border border-dark" id="D5" onclick="reveal('35','D5')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="1" id="35" ><p class="mb-0">1</p></div>
+                            </td>
+                            <td class=" border border-dark" id="D6" onclick="reveal('36','D6')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="3" id="36" ><p class="mb-0">3</p></div>
+                            </td>
+                            <td class=" border border-dark" id="D7" onclick="reveal('37','D7')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="3" id="37" ><p class="mb-0">3</p></div>
+                            </td>
+                            <td class=" border border-dark" id="D8" onclick="reveal('38','D8')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="3" id="38" ><p class="mb-0">3</p></div>
+                            </td>
+                            <td class=" border border-dark" id="D9" onclick="reveal('39','D9')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="3" id="39" ><p class="mb-0">3</p></div>
+                            </td>
+                            <td class=" border border-dark" id="D10" onclick="reveal('40','D10')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="2" id="40" ><p class="mb-0">2</p></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class=" border border-dark" id="E1" onclick="reveal('41','E1')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="0" id="41" ></div>
+                            </td>
+                            <td class=" border border-dark" id="E2" onclick="reveal('42','E2')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="1" id="42" ><p class="mb-0">1</p></div>
+                            </td>
+                            <td class=" border border-dark" id="E3" onclick="reveal('43','E3')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="1" id="43" ><p class="mb-0">1</p></div>
+                            </td>
+                            <td class=" border border-dark" id="E4" onclick="reveal('44','E4')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="2" id="44"><p class="mb-0">2</p></div>
+                            </td>
+                            <td class=" border border-dark" id="E5" onclick="reveal('45','E5')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="flag" id="45" ><p class="mb-0">&#128681</p></div>
+                            </td>
+                            <td class=" border border-dark" id="E6" onclick="reveal('46','E6')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="2" id="46" ><p class="mb-0">2</p></div>
+                            </td>
+                            <td class=" border border-dark" id="E7" onclick="reveal('47','E7')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="flag" id="47" ><p class="mb-0">&#128681</p></div>
+                            </td>
+                            <td class=" border border-dark" id="E8" onclick="reveal('48','E8')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="flag" id="48" ><p class="mb-0">&#128681</p></div>
+                            </td>
+                            <td class=" border border-dark" id="E9" onclick="reveal('49','E9')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="3" id="49" ><p class="mb-0">3</p></div>
+                            </td>
+                            <td class=" border border-dark" id="E10" onclick="reveal('50','E10')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="flag" id="50" ><p class="mb-0">&#128681</p></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class=" border border-dark" id="F1" onclick="reveal('51','F1')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="0" id="51" ></div>
+                            </td>
+                            <td class=" border border-dark" id="F2" onclick="reveal('52','F2')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="1" id="52" ><p class="mb-0">1</p></div>
+                            </td>
+                            <td class=" border border-dark" id="F3" onclick="reveal('53','F3')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="flag" id="53" ><p class="mb-0">&#128681</p></div>
+                            </td>
+                            <td class=" border border-dark" id="F4" onclick="reveal('54','F4')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="3" id="54" ><p class="mb-0">3</p></div>
+                            </td>
+                            <td class=" border border-dark" id="F5" onclick="reveal('55','F5')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="3" id="55" ><p class="mb-0">3</p></div>
+                            </td>
+                            <td class=" border border-dark" id="F6" onclick="reveal('56','F6')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="5" id="56" ><p class="mb-0">5</p></div>
+                            </td>
+                            <td class=" border border-dark" id="F7" onclick="reveal('57','F7')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="5" id="57" ><p class="mb-0">5</p></div>
+                            </td>
+                            <td class=" border border-dark" id="F8" onclick="reveal('58','F8')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="5" id="58" ><p class="mb-0">5</p></div>
+                            </td>
+                            <td class=" border border-dark" id="F9" onclick="reveal('59','F9')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="flag" id="59" ><p class="mb-0">&#128681</p></div>
+                            </td>
+                            <td class=" border border-dark" id="F10" onclick="reveal('60','F10')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="2" id="60"><p class="mb-0">2</p></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class=" border border-dark" id="G1" onclick="reveal('61','G1')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="1" id="61" ><p class="mb-0">1</p></div>
+                            </td>
+                            <td class=" border border-dark" id="G2" onclick="reveal('62','G2')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="2" id="62" ><p class="mb-0">2</p></div>
+                            </td>
+                            <td class=" border border-dark" id="G3" onclick="reveal('63','G3')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="2" id="63" ><p class="mb-0">2</p></div>
+                            </td>
+                            <td class=" border border-dark" id="G4" onclick="reveal('64','G4')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="2" id="64" ><p class="mb-0">2</p></div>
+                            </td>
+                            <td class=" border border-dark" id="G5" onclick="reveal('65','G5')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="flag" id="65"><p class="mb-0">&#128681</p></div>
+                            </td>
+                            <td class=" border border-dark" id="G6" onclick="reveal('66','G6')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="flag" id="66"><p class="mb-0">&#128681</p></div>
+                            </td>
+                            <td class=" border border-dark" id="G7" onclick="reveal('67','G7')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="flag" id="67" ><p class="mb-0">&#128681</p></div>
+                            </td>
+                            <td class=" border border-dark" id="G8" onclick="reveal('68','G8')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="flag" id="68" ><p class="mb-0">&#128681</p></div>
+                            </td>
+                            <td class=" border border-dark" id="G9" onclick="reveal('69','G9')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="2" id="69" ><p class="mb-0">2</p></div>
+                            </td>
+                            <td class=" border border-dark" id="G10" onclick="reveal('70','G10')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="1" id="70" ><p class="mb-0">1</p></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class=" border border-dark" id="H1" onclick="reveal('71','H1')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="1" id="71" ><p class="mb-0">1</p></div>
+                            </td>
+                            <td class=" border border-dark" id="H2" onclick="reveal('72','H2')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="flag" id="72" ><p class="mb-0">&#128681</p></div>
+                            </td>
+                            <td class=" border border-dark" id="H3" onclick="reveal('73','H3')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="1" id="73" ><p class="mb-0">1</p></div>
+                            </td>
+                            <td class=" border border-dark" id="H4" onclick="reveal('74','H4')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="1" id="74" ><p class="mb-0">1</p></div>
+                            </td>
+                            <td class=" border border-dark" id="H5" onclick="reveal('75','H5')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="2" id="75" ><p class="mb-0">2</p></div>
+                            </td>
+                            <td class=" border border-dark" id="H6" onclick="reveal('76','H6')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="3" id="76" ><p class="mb-0">3</p></div>
+                            </td>
+                            <td class=" border border-dark" id="H7" onclick="reveal('77','H7')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="3" id="77" ><p class="mb-0">3</p></div>
+                            </td>
+                            <td class=" border border-dark" id="H8" onclick="reveal('78','H8')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="2" id="78" ><p class="mb-0">2</p></div>
+                            </td>
+                            <td class=" border border-dark" id="H9" onclick="reveal('79','H9')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="1" id="79" ><p class="mb-0">1</p></div>
+                            </td>
+                            <td class=" border border-dark" id="H10" onclick="reveal('80','H10')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="0" id="80" ></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class=" border border-dark" id="I1" onclick="reveal('81','I1')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="2" id="81" ><p class="mb-0">2</p></div>
+                            </td>
+                            <td class=" border border-dark" id="I2" onclick="reveal('82','I2')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="3" id="82" ><p class="mb-0">3</p></div>
+                            </td>
+                            <td class=" border border-dark" id="I3" onclick="reveal('83','I3')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="2" id="83" ><p class="mb-0">2</p></div>
+                            </td>
+                            <td class=" border border-dark" id="I4" onclick="reveal('84','I4')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="1" id="84" ><p class="mb-0">1</p></div>
+                            </td>
+                            <td class=" border border-dark" id="I5" onclick="reveal('85','I5')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="0" id="85" ></div>
+                            </td>
+                            <td class=" border border-dark" id="I6" onclick="reveal('86','I6')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="0" id="86" ></div>
+                            </td>
+                            <td class=" border border-dark" id="I7" onclick="reveal('87','I7')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="0" id="87" ></div>
+                            </td>
+                            <td class=" border border-dark" id="I8" onclick="reveal('88','I8')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="0" id="88" ></div>
+                            </td>
+                            <td class=" border border-dark" id="I9" onclick="reveal('89','I9')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="1" id="89" ><p class="mb-0">1</p></div>
+                            </td>
+                            <td class=" border border-dark" id="I10" onclick="reveal('90','I10')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="1" id="90" ><p class="mb-0">1</p></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class=" border border-dark" id="J1" onclick="reveal('91','J1')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="flag" id="91" ><p class="mb-0">&#128681</p></div>
+                            </td>
+                            <td class=" border border-dark" id="J2" onclick="reveal('92','J2')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="2" id="92" ><p class="mb-0">2</p></div>
+                            </td>
+                            <td class=" border border-dark" id="J3" onclick="reveal('93','J3')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="flag" id="93" ><p class="mb-0">&#128681</p></div>
+                            </td>
+                            <td class=" border border-dark" id="J4" onclick="reveal('94','J4')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="1" id="94" ><p class="mb-0">1</p></div>
+                            </td>
+                            <td class=" border border-dark" id="J5" onclick="reveal('95','J5')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="0" id="95" ></div>
+                            </td>
+                            <td class=" border border-dark" id="J6" onclick="reveal('96','J6')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="0" id="96" ></div>
+                            </td>
+                            <td class=" border border-dark" id="J7" onclick="reveal('97','J7')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="0" id="97" ></div>
+                            </td>
+                            <td class=" border border-dark" id="J8" onclick="reveal('98','J8')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="0" id="98" ></div>
+                            </td>
+                            <td class=" border border-dark" id="J9" onclick="reveal('99','J9')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="1" id="99" ><p class="mb-0">1</p></div>
+                            </td>
+                            <td class=" border border-dark" id="J10" onclick="reveal('100','J10')">
+                                <div class="square d-flex justify-content-center align-items-center"  name="flag" id="100" ><p class="mb-0">&#128681</p></div>
+                            </td>
+                        </tr>
+                        
+                    </table>
+                </div>
+                
+            </div>
+            <div class="col-12 col-md-3 colBox info">
+                <h3>Botones Pulsados</h3>
+                <p>Selector:</p>
+                <p id="selector" name="selector"></p>
+                <p>Valor:</p>
+                <p id="valor"></p>
+                <p>Tag html:</p>
+                <p id="tag"></p>
+                <p>Name :</p>
+                <p id="name"></p>
+            </div>
+        </div>
+    </div>
+    <script src="./js/main.js"></script>
+</body>
+</html>
